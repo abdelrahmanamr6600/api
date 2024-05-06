@@ -30,9 +30,10 @@ def predict():
         float(data.get('Physical Activity Level')),
         float(data.get('Stress Level')),
         float(data.get('BMI Category')),
-        float(data.get('Blood Pressure')),
         float(data.get('Heart Rate')),
-        float(data.get('Daily Steps'))
+        float(data.get('Daily Steps')),
+        float(data.get('systolic_bp')),
+        float(data.get('diastolic_bp')),
     ]
     # Convert features to numpy array and reshape for prediction
     features = np.array(features).reshape(1, -1)
