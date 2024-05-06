@@ -13,7 +13,7 @@ def output(x):
 
 
 # Load the trained model
-model = joblib.load("model.sav")
+model = joblib.load("RandomFores.sav")
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -30,6 +30,7 @@ def predict():
         float(data.get('Physical Activity Level')),
         float(data.get('Stress Level')),
         float(data.get('BMI Category')),
+        float(data.get('Blood Pressure')),
         float(data.get('Heart Rate')),
         float(data.get('Daily Steps'))
     ]
